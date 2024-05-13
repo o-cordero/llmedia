@@ -128,7 +128,7 @@
 					<!--<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>-->
 					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
 					<!--!li><a href="#" class="icon brands alt fa-dribbble"><span class="label">Dribbble</span></a></li>-->
-					<li><a href="mailto:omar@llmedia.biz" class="icon solid alt fa-envelope"><span class="label">Email: contact@llmedia.biz</span></a></li>
+					<li><a href="mailto:contact@llmedia.biz" class="icon solid alt fa-envelope"><span class="label">Email: contact@llmedia.biz</span></a></li>
 				</ul>
 				<ul class="copyright" style="text-align: center; list-style: none; padding: 0;">
 					<li style="display: inline-block;">&copy; LLMedia 2024</li>
@@ -137,8 +137,16 @@
 				</ul>
 			</footer>		
 		</section>
-
 		<!-- Scripts -->
+			<script>
+			// Clear form fields after successful submission
+			document.getElementById('contactForm').addEventListener('submit', function() {
+				document.getElementById('name').value = '';
+				document.getElementById('email').value = '';
+				document.getElementById('phone').value = '';
+				document.getElementById('message').value = '';
+			});
+			</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
