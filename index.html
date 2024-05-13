@@ -111,7 +111,7 @@
 						<div class="col-12"><textarea name="Message" id="message" placeholder="Message" rows="4" required></textarea></div>
 						<div class="col-12">
 							<ul class="actions special">
-								<li><button type="submit" class="primary">Send Message</button></li>
+								<li><button type="submit" class="primary" onclick="resetForm()">Send Message</button></li>
 							</ul>
 						</div>
 					</div>
@@ -139,13 +139,9 @@
 		</section>
 		<!-- Scripts -->
 			<script>
-			// Clear form fields after successful submission
-			document.getElementById('contactForm').addEventListener('submit', function() {
-				document.getElementById('name').value = '';
-				document.getElementById('email').value = '';
-				document.getElementById('phone').value = '';
-				document.getElementById('message').value = '';
-			});
+				function resetForm() {
+					document.getElementById('contactForm').reset();
+				}
 			</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
