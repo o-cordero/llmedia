@@ -102,16 +102,16 @@
 				<p>Let's establish lasting connections with your target audience and increase your business opportunities!</p>
 
 				<!-- Form with onsubmit attribute -->
-				<form method="post" action="contact-form-process.php" accept-charset="UTF-8" onsubmit="return submitForm();">
-					<div class="row gtr-uniform">
+				<div id="contact-form" class="row gtr-uniform">
+					<form action="https://formspree.io/f/mpzvnljk" method="POST">
+					    <div class="row gtr-uniform">
 						<div class="col-6 col-12-xsmall"><input type="text" name="Name" id="name" placeholder="Name" required /></div>
 						<div class="col-6 col-12-xsmall"><input type="email" name="Email" id="email" placeholder="Email" required /></div>
 						<div class="col-5 col-12-small"><input type="tel" name="Phone" id="phone" placeholder="Phone Number" pattern="^\+?[0-9]{10,14}$" required /></div>
 						<div class="col-12"><textarea name="Message" id="message" placeholder="Message" rows="4" required></textarea></div>
-					
 						<div class="col-12">
 							<ul class="actions special">
-								<li><input type="submit" value="Send Message" class="primary" /></li>
+								<li><button type="submit" class="primary">Send Message</button></li>
 							</ul>
 						</div>
 					</div>
