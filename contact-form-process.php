@@ -4,7 +4,7 @@ session_start();
 if (isset($_POST['Email'])) {
     // Your existing form processing code...
     // EDIT THE EMAIL TO YOUR PREFERRED EMAIL ADDRESS
-    $email_to = "info@llmedia.biz";
+    $email_to = "omar@llmedia.biz";
     $email_subject = "New form submission";
 
     // Function to handle errors
@@ -42,7 +42,7 @@ if (isset($_POST['Email'])) {
     // Validate name and message format
     $string_exp = "/^[A-Za-z .',-]+$/";
     if (!preg_match($string_exp, $name)) {
-        problem('The Name you entered does not appear to be valid. Please keep it simple, and use only letters, commas, or periods.');
+        problem('Please keep it simple, and use only letters, commas, or periods. The input you entered is not valid, please try again.');
     }
 
     if (strlen($message) < 2) {

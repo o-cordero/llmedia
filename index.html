@@ -100,10 +100,7 @@
 					<h2>Get in touch</h2>
 				</header>
 				<p>Let's establish lasting connections with your target audience and increase your business opportunities!</p>
-				
-				<!-- Add reCAPTCHA script before the form - not currently working, need to resolve DNS connection.
-				<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-			-->
+
 				<!-- Form with onsubmit attribute -->
 				<form method="post" action="contact-form-process.php" accept-charset="UTF-8" onsubmit="return submitForm();">
 					<div class="row gtr-uniform">
@@ -111,9 +108,7 @@
 						<div class="col-6 col-12-xsmall"><input type="email" name="Email" id="email" placeholder="Email" required /></div>
 						<div class="col-5 col-12-small"><input type="tel" name="Phone" id="phone" placeholder="Phone Number" pattern="^\+?[0-9]{10,14}$" required /></div>
 						<div class="col-12"><textarea name="Message" id="message" placeholder="Message" rows="4" required></textarea></div>
-						<!-- Add reCAPTCHA widget disabled.
-						<div class="col-12 g-recaptcha" data-sitekey = "6LeCA9spAAAAAOasNzAfTDGQyns7nB6mN-06OeT2"></div> 
-						-->
+					
 						<div class="col-12">
 							<ul class="actions special">
 								<li><input type="submit" value="Send Message" class="primary" /></li>
@@ -133,7 +128,7 @@
 					<!--<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>-->
 					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
 					<!--!li><a href="#" class="icon brands alt fa-dribbble"><span class="label">Dribbble</span></a></li>-->
-					<li><a href="contact@llmedia.biz" class="icon solid alt fa-envelope"><span class="label">Email: contact@llmedia.biz</span></a></li>
+					<li><a href="mailto:omar@llmedia.biz" class="icon solid alt fa-envelope"><span class="label">Email: contact@llmedia.biz</span></a></li>
 				</ul>
 				<ul class="copyright" style="text-align: center; list-style: none; padding: 0;">
 					<li style="display: inline-block;">&copy; LLMedia 2024</li>
@@ -154,3 +149,10 @@
 
 	</body>
 </html>
+				
+<!-- Add reCAPTCHA script before the form - not currently working, need to resolve DNS connection.
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+-->
+<!-- Add reCAPTCHA widget disabled.
+<div class="col-12 g-recaptcha" data-sitekey = "6LeCA9spAAAAAOasNzAfTDGQyns7nB6mN-06OeT2"></div> 
+-->
