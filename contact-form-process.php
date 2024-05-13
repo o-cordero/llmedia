@@ -4,7 +4,7 @@ session_start();
 if (isset($_POST['Email'])) {
 
     // reCAPTCHA Secret Key obtained from the reCAPTCHA admin console
-    $recaptcha_secret_key = 'YOUR_RECAPTCHA_SECRET_KEY';
+    $recaptcha_secret_key = '6LeCA9spAAAAAN8p3YX6BfSZWFFkmLqtzvwiKpU7';
 
     // Verify reCAPTCHA response
     $recaptcha_response = $_POST['g-recaptcha-response'];
