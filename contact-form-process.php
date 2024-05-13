@@ -2,33 +2,6 @@
 session_start();
 
 if (isset($_POST['Email'])) {
-
-    // reCAPTCHA Secret Key obtained from the reCAPTCHA admin console
-    $recaptcha_secret_key = '6LeCA9spAAAAAN8p3YX6BfSZWFFkmLqtzvwiKpU7';
-
-    // Verify reCAPTCHA response
-    $recaptcha_response = $_POST['g-recaptcha-response'];
-    $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-    $recaptcha_data = array(
-        'secret' => $recaptcha_secret_key,
-        'response' => $recaptcha_response
-    );
-
-    $recaptcha_options = array(
-        'http' => array(
-            'method' => 'POST',
-            'content' => http_build_query($recaptcha_data)
-        )
-    );
-
-    $recaptcha_context = stream_context_create($recaptcha_options);
-    $recaptcha_result = file_get_contents($recaptcha_url, false, $recaptcha_context);
-    $recaptcha_success = json_decode($recaptcha_result)->success;
-
-    if (!$recaptcha_success) {
-        problem('reCAPTCHA verification failed. Please complete the reCAPTCHA challenge.');
-    }
-
     // Your existing form processing code...
     // EDIT THE EMAIL TO YOUR PREFERRED EMAIL ADDRESS
     $email_to = "info@llmedia.biz";
@@ -107,3 +80,30 @@ if (isset($_POST['Email'])) {
     exit();
 }
 ?>
+<!--
+    // reCAPTCHA Secret Key obtained from the reCAPTCHA admin console
+    $recaptcha_secret_key = '6LeCA9spAAAAAN8p3YX6BfSZWFFkmLqtzvwiKpU7';
+
+    // Verify reCAPTCHA response
+    $recaptcha_response = $_POST['g-recaptcha-response'];
+    $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+    $recaptcha_data = array(
+        'secret' => $recaptcha_secret_key,
+        'response' => $recaptcha_response
+    );
+
+    $recaptcha_options = array(
+        'http' => array(
+            'method' => 'POST',
+            'content' => http_build_query($recaptcha_data)
+        )
+    );
+
+    $recaptcha_context = stream_context_create($recaptcha_options);
+    $recaptcha_result = file_get_contents($recaptcha_url, false, $recaptcha_context);
+    $recaptcha_success = json_decode($recaptcha_result)->success;
+
+    if (!$recaptcha_success) {
+        problem('reCAPTCHA verification failed. Please complete the reCAPTCHA challenge.');
+    }
+-->
